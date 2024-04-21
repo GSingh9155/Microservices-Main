@@ -1,5 +1,5 @@
 server:
-  port:9296
+  port: 9296
 
 spring:
   application:
@@ -8,5 +8,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shabbirdwd53/spring-app-config.git
+#          uri: https://github.com/shabbirdwd53/spring-app-config.git
+          uri: https://github.com/GSingh9155/Spring-App-Config.git
           clone-on-start: true
+logging:
+  level:
+    root: INFO
+
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
