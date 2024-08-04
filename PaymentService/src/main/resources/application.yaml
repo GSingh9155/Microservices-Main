@@ -20,6 +20,10 @@ logging:
   level:
     root: INFO
 
+management:
+  tracing:
+    probability: 1.0
+
 
 #eureka:
 #  instance:
