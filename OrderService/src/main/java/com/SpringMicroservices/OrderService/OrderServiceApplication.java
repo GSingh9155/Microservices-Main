@@ -25,13 +25,18 @@ public class OrderServiceApplication {
 		SpringApplication.run(OrderServiceApplication.class, args);
 	}
 
-	@Autowired
-	private ClientRegistrationRepository clientRegistrationRepository;
+
+	private final ClientRegistrationRepository clientRegistrationRepository;
+	private final OAuth2AuthorizedClientRepository oAuth2AuthorizedClientRepository;
 
 	@Autowired
-	private OAuth2AuthorizedClientRepository oAuth2AuthorizedClientRepository;
+	public OrderServiceApplication(ClientRegistrationRepository clientRegistrationRepository,
+								   OAuth2AuthorizedClientRepository oAuth2AuthorizedClientRepository){
+		this.clientRegistrationRepository =  clientRegistrationRepository;
+		this.oAuth2AuthorizedClientRepository = oAuth2AuthorizedClientRepository;
+	}
 
-
+	@Bean
 	@LoadBalanced
 	public RestTemplate restTemplate(){
 

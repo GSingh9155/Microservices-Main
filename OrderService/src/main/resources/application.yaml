@@ -32,6 +32,9 @@ spring:
             okta:
               issuer-uri: https://dev-80881313.okta.com/oauth2/default
 
+logging:
+  level:
+    root: DEBUG
 
 resilience4j:
   circuitbreaker:
