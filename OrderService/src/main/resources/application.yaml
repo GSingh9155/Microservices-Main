@@ -1,5 +1,7 @@
 server:
   port: 8082
+  tomcat:
+    use-native: false
 
 spring:
   datasource:
@@ -31,10 +33,10 @@ spring:
           provider:
             okta:
               issuer-uri: https://dev-80881313.okta.com/oauth2/default
-
-logging:
-  level:
-    root: DEBUG
+#
+#logging:
+#  level:
+#    root: DEBUG
 
 resilience4j:
   circuitbreaker:

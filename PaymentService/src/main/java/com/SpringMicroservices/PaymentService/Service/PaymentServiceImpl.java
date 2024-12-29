@@ -31,7 +31,7 @@ public class PaymentServiceImpl implements PaymentService{
                 .amount(paymentRequest.getAmount())
                 .build();
 
-        log.info("Transaction Coompleted with ID: {}", transactionDetails.getId());
+        log.info("Transaction Completed with ID: {}", transactionDetails.getId());
 
         transactionDetailsRepository.save(transactionDetails);
         return transactionDetails.getId();
